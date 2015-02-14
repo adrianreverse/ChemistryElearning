@@ -90,13 +90,13 @@ public class UserAccountController {
 	public ModelAndView editAccountData() {
 		ModelAndView mav = new ModelAndView();
 		UserAccount user = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
-		mav.addObject("editAccountData", user);
+		mav.addObject("ce-account-data-form", user);
 		mav.setViewName("accountdataform");
 		return mav;
 	}
 
 	@RequestMapping(value = "/account/edit/accountdata", method = RequestMethod.POST)
-	public String postAccountData(@ModelAttribute("editAccountData")/* @Valid */UserAccount userAccount) {
+	public String postAccountData(@ModelAttribute("ce-account-data-form")/* @Valid */UserAccount userAccount) {
 		UserAccount user = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
 		userAccount.setId(user.getId());
 		userAccount.setName(user.getName());

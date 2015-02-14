@@ -43,8 +43,8 @@
 						</security:authorize>
 						<security:authorize access="isAnonymous()">
 							<img src="img/laboratory.png"
-								class="img-thumbnail mode-images disabled">
-							<a class="btn btn-primary sample-test disabled" href="#test">${sampleTestButton}</a>
+								class="img-thumbnail mode-images ce-disabled">
+							<a class="btn btn-primary sample-test ce-disabled" href="#test">${sampleTestButton}</a>
 						</security:authorize>
 					</div>
 					<div class="col-sm-3 col-sm-push-2">
@@ -54,8 +54,8 @@
 						</security:authorize>
 						<security:authorize access="isAnonymous()">
 							<img src="img/laboratory.png"
-								class="img-thumbnail mode-images disabled">
-							<a class="btn btn-default exam disabled" href="#exam">${examButton}</a>
+								class="img-thumbnail mode-images ce-disabled">
+							<a class="btn btn-default exam ce-disabled" href="#exam">${examButton}</a>
 						</security:authorize>
 					</div>
 				</div>
