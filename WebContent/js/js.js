@@ -263,4 +263,4 @@ $(function() {
 function removeDataFromTile(userData, editButton) {
 	$(userData).remove();
 	$(editButton).remove();
-}
+} //aaa
