@@ -1,1 +1,21 @@
 /target/
+
+ /create mode 100644 .classpath
+ /create mode 100644 .project
+ /create mode 100644 .settings/.jsdtscope
+ /create mode 100644 .settings/org.eclipse.core.resources.prefs
+ /create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ /create mode 100644 .settings/org.eclipse.jdt.ui.prefs
+ /create mode 100644 .settings/org.eclipse.jst.j2ee.ejb.annotations.xdoclet.prefs
+
+ /create mode 100644 .settings/org.eclipse.ltk.core.refactoring.prefs
+ /create mode 100644 .settings/org.eclipse.m2e.core.prefs
+ /create mode 100644 .settings/org.eclipse.wst.common.component
+ /create mode 100644 .settings/org.eclipse.wst.common.project.facet.core.prefs.xml
+ /create mode 100644 .settings/org.eclipse.wst.common.project.facet.core.xml
+ /create mode 100644 .settings/org.eclipse.wst.html.core.prefs
+ /create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.container
+ /create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.name
+ /create mode 100644 .settings/org.eclipse.wst.validation.prefs
+ /create mode 100644 .settings/org.eclipse.wst.ws.service.policy.prefs
+ /create mode 100644 .settings/org.eclipse.wst.xsl.core.prefs
