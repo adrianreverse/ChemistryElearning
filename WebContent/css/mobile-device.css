@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+@media only screen and (max-device-width: 480px) {
+	.navbar-default {
+		background-color: #fff;
+		border-color: #fff;
+		border-radius: 0px;
+	}
+}
