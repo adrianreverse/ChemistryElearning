@@ -20,7 +20,7 @@
 	</head>
 	<body class="body">
 
-<form:form modelAttribute="ce-account-data-form" role="form" method="POST"
+<form:form id="js-account-form" modelAttribute="accountData" role="form" method="POST"
 	action="/ChemistryElearning/account/edit/accountdata">
 	<div class="form-group">
 		<label for="login">${loginLabel}</label>

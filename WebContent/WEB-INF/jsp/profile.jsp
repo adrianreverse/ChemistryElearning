@@ -41,7 +41,7 @@
 							<h3 class="tile-title">Dane konta</h3>
 							<p id="profile-user-accountdata">${userProfile.login}</p>
 							<input type="button" id="edit-button-accountdata" class="btn btn-link dotted-link" value="edit"/>
-							<div id="js-account-data-form"></div>
+							<div id="js-account-data-form-region"></div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-sm-12 user-account-data">

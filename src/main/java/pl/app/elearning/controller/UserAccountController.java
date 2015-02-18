@@ -1,5 +1,6 @@
 package pl.app.elearning.controller;
 
+import org.apache.commons.lang3.BooleanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -42,6 +43,7 @@ public class UserAccountController {
 	@RequestMapping(value = "/account/edit", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public UserAccount editUserAccount(@RequestBody UserAccount user) {
+		System.out.println(user.getId());
 		UserAccount userAccout = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
 		user.setId(userAccout.getId());
 		UserAccount a = userAccountService.addOrUpdateUser(user);
@@ -90,13 +92,13 @@ public class UserAccountController {
 	public ModelAndView editAccountData() {
 		ModelAndView mav = new ModelAndView();
 		UserAccount user = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
-		mav.addObject("ce-account-data-form", user);
+		mav.addObject("accountData", user);
 		mav.setViewName("accountdataform");
 		return mav;
 	}
 
 	@RequestMapping(value = "/account/edit/accountdata", method = RequestMethod.POST)
-	public String postAccountData(@ModelAttribute("ce-account-data-form")/* @Valid */UserAccount userAccount) {
+	public String postAccountData(@ModelAttribute("accountData")/* @Valid */UserAccount userAccount) {
 		UserAccount user = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
 		userAccount.setId(user.getId());
 		userAccount.setName(user.getName());
@@ -165,4 +167,11 @@ public class UserAccountController {
 		return userAccountService.isPasswordExists(user, oldpassword).toString();
 	}
 
+	@RequestMapping(value = "/account/edit/account/availableLogin")
+	@ResponseBody
+	public String checkLogin(@RequestParam String login) {
+		String loggedInUser = userAccountService.userLoginLoggedIn();
+		Boolean isLogin = userAccountService.isLoginExists(login);
+		return login.equals(loggedInUser) ? BooleanUtils.negate(isLogin).toString() : isLogin.toString();
+	}
 }
