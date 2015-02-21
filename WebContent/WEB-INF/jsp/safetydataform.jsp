@@ -20,7 +20,7 @@
 	</head>
 	<body class="body">
 
-<form:form role="form" method="POST"
+<form:form id="js-safety-form" role="form" method="POST"
 	action="/ChemistryElearning/account/edit/safetydata"
 	modelAttribute="editSafetyData">
 	<div class="form-group">

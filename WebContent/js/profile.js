@@ -184,9 +184,90 @@ $(function() {
 		}
 	});
 	
+	/**
+	 * Removes old view and inject password form after clicking on edit safety
+	 * button
+	 */
+	$('#edit-button-safetydata').click(
+			function() {
+				$.ajax({
+					type : "GET",
+					url : "account/edit/safetydata",
+					success : function(html) {
+						removeDataFromTile('#profile-user-safetydata',
+								'#edit-button-safetydata');
+						$('#js-safety-data-form-region').html(html);
+						$("#password").attr("value", "");
+					},
+					error : function(error) {
+						console.log(error);
+					}
+				});
+			});
+
+	/**
+	 * Validates password form on profile page in safety data module
+	 */
+
+	$('#js-safety-form').validate({
+		rules : {
+			oldpassword : {
+				minlength : 6,
+				maxlength : 50,
+				required : true,
+				remote : {
+					url : "account/edit/account/availablePassword",
+					type : "GET",
+					data : {
+						userlogin : function() {
+							return $("#oldpassword").val();
+						}
+					}
+				}
+			},
+			password : {
+				minlength : 6,
+				maxlength : 50,
+				notEqualTo:$("#oldpassword"),
+				required : true
+			},
+			passwordConfirmation : {
+				minlength : 6,
+				maxlength : 50,
+				equalTo : "#password",
+				required : true
+			}
+		},
+
+		highlight : function(element) {
+			$(element).closest('.form-group').addClass('has-error');
+		},
+		unhighlight : function(element) {
+			$(element).closest('.form-group').removeClass('has-error');
+		},
+
+		errorElement : 'span',
+		errorClass : 'alert alert-error',
+		errorPlacement : function(error, element) {
+			$(error).addClass('form-alert');
+			error.insertAfter(element);
+		},
+		
+		messages : {
+			oldpassword : {
+				remote : "Current password is incorrect."
+			}
+		}
+		
+	});
+	
 	function removeDataFromTile(userData, editButton) {
 		$(userData).remove();
 		$(editButton).remove();
 	}
+	
+	jQuery.validator.addMethod("notEqualTo", function(value, element, param) {
+		 return this.optional(element) || value != $(param).val();
+		 }, "This has to be different...");
 
 });

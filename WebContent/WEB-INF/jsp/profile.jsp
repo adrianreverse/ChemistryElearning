@@ -59,7 +59,7 @@
 						<div class="tile">
 							<h3 class="tile-title">Bezpieczeństwo</h3>
 							<input type="button" id="edit-button-safetydata" class="btn btn-link dotted-link" value="edit"/>
-							<div id="js-safety-data-form"></div>
+							<div id="js-safety-data-form-region"></div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-sm-12 user-account-data">

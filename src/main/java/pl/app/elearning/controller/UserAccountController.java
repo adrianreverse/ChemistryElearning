@@ -160,14 +160,14 @@ public class UserAccountController {
 		return REDIRECT_ACOUNT;
 	}
 
-	@RequestMapping(value = "/availablePassword", method = RequestMethod.GET)
+	@RequestMapping(value = "/account/edit/account/availablePassword", method = RequestMethod.GET)
 	@ResponseBody
 	public String checkPassword(@RequestParam String oldpassword) {
 		UserAccount user = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
 		return userAccountService.isPasswordExists(user, oldpassword).toString();
 	}
 
-	@RequestMapping(value = "/account/edit/account/availableLogin")
+	@RequestMapping(value = "/account/edit/account/availableLogin", method = RequestMethod.GET)
 	@ResponseBody
 	public String checkLogin(@RequestParam String login) {
 		String loggedInUser = userAccountService.userLoginLoggedIn();
@@ -175,7 +175,7 @@ public class UserAccountController {
 		return login.equals(loggedInUser) ? BooleanUtils.negate(isLogin).toString() : isLogin.toString();
 	}
 
-	@RequestMapping(value = "/account/edit/account/availableEmail")
+	@RequestMapping(value = "/account/edit/account/availableEmail", method = RequestMethod.GET)
 	@ResponseBody
 	public String checkEmail(@RequestParam String email) {
 		String loggedInUser = userAccountService.userLoginLoggedIn();
