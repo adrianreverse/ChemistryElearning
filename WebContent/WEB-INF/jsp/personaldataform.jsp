@@ -20,7 +20,7 @@
 	</head>
 	<body class="body">
 
-<form:form action="/ChemistryElearning/account/edit/personaldata"
+<form:form id="js-personal-form" action="/ChemistryElearning/account/edit/personaldata"
 	role="form" method="POST" modelAttribute="editPersonalData">
 	<div class="form-group">
 		<label for="name">${nameLabel}</label>

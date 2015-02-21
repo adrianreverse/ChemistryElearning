@@ -33,7 +33,7 @@
 							<h3 class="tile-title">Dane osobowe</h3>
 							<p id="profile-user-personaldata">${userProfile.name} ${userProfile.surname}</p>
 							<input type="button" id="edit-button-personaldata" class="btn btn-link dotted-link" value="edit"/>
-							<div id="js-personal-data-form"></div>
+							<div id="js-personal-data-form-region"></div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-sm-12 user-account-data">
@@ -49,7 +49,7 @@
 							<h3 class="tile-title">Dane kontaktowe</h3>
 							<p id="profile-user-emaildata">${userProfile.email}</p>
 							<input type="button" id="edit-button-emaildata" class="btn btn-link dotted-link" value="edit"/>
-							<div id="js-email-data-form"></div>
+							<div id="js-email-data-form-region"></div>
 						</div>	
 					</div>
 				</div>

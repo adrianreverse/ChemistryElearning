@@ -20,7 +20,7 @@
 	</head>
 	<body class="body">
 
-<form:form role="form" method="POST" modelAttribute="editEmailData"
+<form:form id="js-email-form" role="form" method="POST" modelAttribute="editEmailData"
 	action="/ChemistryElearning/account/edit/emaildata">
 	<div class="form-group">
 		<label for="email">${emailLabel}</label>
