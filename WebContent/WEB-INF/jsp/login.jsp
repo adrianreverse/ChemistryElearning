@@ -15,7 +15,7 @@
   	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mobile-device.css"/>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  	<script src="${pageContext.request.contextPath}/js/js.js"></script>
+  	<script src="${pageContext.request.contextPath}/js/login.js"></script>
 </head>
 <body>
 

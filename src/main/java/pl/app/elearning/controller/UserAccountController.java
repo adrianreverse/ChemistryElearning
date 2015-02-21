@@ -174,4 +174,13 @@ public class UserAccountController {
 		Boolean isLogin = userAccountService.isLoginExists(login);
 		return login.equals(loggedInUser) ? BooleanUtils.negate(isLogin).toString() : isLogin.toString();
 	}
+
+	@RequestMapping(value = "/account/edit/account/availableEmail")
+	@ResponseBody
+	public String checkEmail(@RequestParam String email) {
+		String loggedInUser = userAccountService.userLoginLoggedIn();
+		UserAccount user = userAccountService.getUserByLogin(loggedInUser);
+		Boolean isEmail = userAccountService.isEmailExists(email);
+		return email.equals(user.getEmail()) ? BooleanUtils.negate(isEmail).toString() : isEmail.toString();
+	}
 }
