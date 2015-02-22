@@ -1,12 +1,14 @@
 package pl.app.elearning.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
@@ -15,6 +17,8 @@ import javax.validation.constraints.Size;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.validator.constraints.Email;
+
+import pl.app.elearning.domain.mode.Mode;
 
 //@ScriptAssert(lang = "javascript", script = "_this.passwordConfirmation.equals(_this.password)", message = "account.password.mismatch.message")
 @Entity
@@ -73,6 +77,9 @@ public class UserAccount implements Serializable {
 
 	public UserAccount() {
 	}
+
+	@OneToMany(mappedBy = "user")
+	List<Mode> modes;
 
 	public int getId() {
 		return id;
@@ -149,6 +156,10 @@ public class UserAccount implements Serializable {
 			throw new IllegalArgumentException("Invalid password confirmation");
 		}
 		this.passwordConfirmation = passwordConfirmation;
+	}
+
+	public List<Mode> getModes() {
+		return modes;
 	}
 
 	@Override
