@@ -228,7 +228,7 @@ $(function() {
 			password : {
 				minlength : 6,
 				maxlength : 50,
-				notEqualTo:$("#oldpassword"),
+				notEqualTo: "#oldpassword",
 				required : true
 			},
 			passwordConfirmation : {
@@ -268,6 +268,6 @@ $(function() {
 	
 	jQuery.validator.addMethod("notEqualTo", function(value, element, param) {
 		 return this.optional(element) || value != $(param).val();
-		 }, "This has to be different...");
+		 }, 'New password has to be different from current password');
 
 });
