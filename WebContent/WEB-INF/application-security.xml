@@ -7,22 +7,23 @@
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
 
-	<http auto-config="true" use-expressions="true" >
+	<http auto-config="true" use-expressions="true" access-denied-page="/home">
 		<form-login authentication-failure-url="/login?error" default-target-url="/home" />
 		<remember-me />
 		<logout logout-success-url="/home" delete-cookies="JSESSIONID" />
-		<intercept-url pattern="/account*" access="isAuthenticated()" />
-		<access-denied-handler error-page="/accessdenied"/>
+		<intercept-url pattern="/account*" access="isAuthenticated()"/>
+	<!--	<access-denied-handler error-page="/home"/>
+  -->
 	</http>
 <!--  
 	<authentication-manager>
 		<authentication-provider>
 			<jdbc-user-service data-source-ref="dataSource"
-				users-by-username-query="SELECT LOGIN, EMAIL, PASSWORD 
+				users-by-username-query="SELECT LOGIN, NAME, SURNAME, EMAIL, PASSWORD 
 		  		FROM USER 
 		  		WHERE LOGIN = ?"
-				authorities-by-username-query="SELECT LOGIN, EMAIL, PASSWORD 
-			    FROM USER 
+				authorities-by-username-query="SELECT LOGIN, NAME, SURNAME, EMAIL, PASSWORD 
+			    FROM USER u, ROLE r
 			    WHERE LOGIN = ?" />
 		</authentication-provider>
 	</authentication-manager>
@@ -34,5 +35,5 @@
   <user name="adrian" password="adrian" authorities="ROLE_USER" />  
      </user-service>  
    </authentication-provider>  
- </authentication-manager>  
+ </authentication-manager>   
 </beans:beans>

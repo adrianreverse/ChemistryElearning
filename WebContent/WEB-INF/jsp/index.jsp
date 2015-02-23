@@ -44,7 +44,7 @@
 						<security:authorize access="isAnonymous()">
 							<img src="img/laboratory.png"
 								class="img-thumbnail mode-images ce-disabled">
-							<a class="btn btn-primary sample-test ce-disabled" href="#test">${sampleTestButton}</a>
+							<a class="btn btn-primary sample-test ce-disabled" href="${pageContext.request.contextPath}/account">${sampleTestButton}</a>
 						</security:authorize>
 					</div>
 					<div class="col-sm-3 col-sm-push-2">
