@@ -208,6 +208,10 @@ $(function() {
 	/**
 	 * Validates password form on profile page in safety data module
 	 */
+	
+	jQuery.validator.addMethod("notEqualTo", function(value, element, param) {
+		 return this.optional(element) || value != $(param).val();
+		 }, 'New password has to be different from current password');
 
 	$('#js-safety-form').validate({
 		rules : {
@@ -266,8 +270,4 @@ $(function() {
 		$(editButton).remove();
 	}
 	
-	jQuery.validator.addMethod("notEqualTo", function(value, element, param) {
-		 return this.optional(element) || value != $(param).val();
-		 }, 'New password has to be different from current password');
-
 });
