@@ -6,7 +6,7 @@ $(function() {
 	var $write = $('#write'), shift = false, capslock = false;
 
 	$('#keyboard li').click(function() {
-		var $this = $(this), character = $this.html(); 
+		var $this = $(this), character = $this.html();
 
 		if ($this.hasClass('left-shift') || $this.hasClass('right-shift')) {
 			$('#keyboard .left-shift').toggleClass('active');
@@ -66,4 +66,19 @@ $(function() {
 
 	});
 
+	/**
+	 * Injects and displays keyboard after clicking on screen keyboard button
+	 */
+	$('#screen-keyboard').click(function() {
+		$.ajax({
+			type : "GET",
+			url : "keyboard",
+			success : function(response) {
+				$("#screen-keyboard-region").html(response);
+			},
+			error : function(error) {
+				console.log(error);
+			}
+		});
+	});
 });
