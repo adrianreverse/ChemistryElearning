@@ -2,9 +2,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%@ include file="messages.jsp"%>
-<c:url var="postLoginUrl" value="/j_spring_security_check" />
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,13 +13,11 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="${pageContext.request.contextPath}/js/keyboard.js"></script>
+		<script src="${pageContext.request.contextPath}/js/js.js"></script>
 	</head>
 <body>
 
 <textarea id="message-content" rows="4" cols="50" placeholder="Treść wiadomości">  </textarea>
-
-
-
 
 	<ul id="keyboard"> 
 		<li class = "character"><span></span><span></span></li>
