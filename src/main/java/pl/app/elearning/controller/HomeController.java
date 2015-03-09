@@ -19,4 +19,9 @@ public class HomeController {
 		return "accessdenied";
 	}
 
+	@RequestMapping(value = "/keyboard", method = RequestMethod.GET)
+	public String keyboard() {
+		return "keyboard";
+	}
+
 }
