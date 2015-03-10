@@ -42,7 +42,7 @@ $(function() {
 		}
 		
 		if ($this.hasClass('alt-ctrl')) {
-			$this.toggleClass('active');
+			$('#keyboard .alt-ctrl').toggleClass('active');
 			$('.letter span').toggle();
 			altctrl = true;
 			return false;
