@@ -79,13 +79,4 @@ $(function() {
 
 	});
 
-	$('#keyboard .shift.active').hover(function() {
-		$(this).css('color', '#fff');
-		$(this).css('background', '#fff');
-	});
-
-	$('#keyboard .capslock.active').hover(function() {
-		$(this).css('color', '#fff');
-	});
-
 });

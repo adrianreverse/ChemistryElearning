@@ -3,51 +3,60 @@
 #keyboard {
 	list-style: none;
 	background: #d3d3d3;
+	padding: 2rem 3.5rem;
+	height: 36.5rem;
+	width: 104.3rem;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 #keyboard li {
-	padding: 10px;
-	margin: 5px;
-	width: 50px;
-	height: 50px;
+	padding: 1rem;
+	margin: 0.5rem;
+	width: 5.5rem;
+	height: 5.5rem;
 	text-align: center;
-	line-height: 28px;
+	line-height: 3.5rem;
 	background: #fff;
-	border: 1px solid #f9f9f9;
 	float: left;
+	border-radius: 0.4rem;
 }
 
 #keyboard li:hover {
 	position: relative;
 	top: 1px;
 	left: 1px;
-	color: red;
-	border-color: #e5e5e5;
+	color: #ff6600;
+	border-color: #fff;
 	cursor: pointer;
 }
 
 #keyboard .backspace {
-	width: 100px;
+	width: 11.5rem;
 }
 
 #keyboard .tab {
-	width: 100px;
+	width: 11.5rem;
 }
 
 #keyboard .capslock {
-	width: 120px;
+	width: 12.5rem;
 }
 
 #keyboard .enter {
-	width: 120px;
+	width: 11rem;
 }
 
 #keyboard .shift {
-	width: 150px;
+	width: 15rem;
 }
 
 #keyboard .space {
-	width: 450px;
+	width: 57.4rem;
+}
+
+#keyboard .alt-ctrl {
+	width: 18.4rem;
 }
 
 .uppercase {
@@ -56,7 +65,9 @@
 
 #keyboard .shift.active, 
 #keyboard .capslock.active{
-    background : red;
+    background : #ff6600;
+    border-color : #ff6600;
+    color: #fff;
 }
 
 .tab {

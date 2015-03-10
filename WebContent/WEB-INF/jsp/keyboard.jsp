@@ -74,7 +74,9 @@
 		<li class="character"><span class="off">.</span><span class="on">&gt;</span></li>
 		<li class="character"><span class="off">/</span><span class="on">?</span></li>
 		<li class="shift">Shift</li>
-		<li class="space"></li>		
+		<li class="alt-ctrl">Alt + Ctrl</li>	
+		<li class="space"></li>
+		<li class="alt-ctrl">Alt + Ctrl</li>	
 	</ul>
 
 
