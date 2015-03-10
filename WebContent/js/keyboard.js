@@ -19,7 +19,7 @@ $(function() {
 		});
 	});
 
-	var $write = $('#message-content'), shift = false, capslock = false, altctrl=false;
+	var $text = $('#message-content'), shift = false, capslock = false, altctrl=false;
 
 	$('#keyboard li').click(function() {
 		var $this = $(this), character = $this.html();
@@ -27,8 +27,11 @@ $(function() {
 		if ($this.hasClass('shift')) {
 			$('#keyboard .shift').toggleClass('active');
 			$('.letter').toggleClass('uppercase');
-			$('.character span').toggle();
-
+			
+			if(altctrl === false) {
+				$('.character span').toggle();
+			}
+			
 			shift = (shift === true) ? false : true;
 			capslock = false;
 			return false;
@@ -44,7 +47,19 @@ $(function() {
 		if ($this.hasClass('alt-ctrl')) {
 			$('#keyboard .alt-ctrl').toggleClass('active');
 			$('.letter span').toggle();
-			altctrl = true;
+			altctrl = (altctrl === true) ? false : true;
+			
+			if(altctrl === true) {
+				$('.character span').css("display", "none");
+			}
+			else{
+				if(shift === true) {
+					$('.character span.on').css("display", "inline");
+				}
+				else {
+					$('.character span.off').css("display", "inline");
+				}
+			}
 			return false;
 		}
 
@@ -53,7 +68,8 @@ $(function() {
 		}
 
 		if ($this.hasClass('backspace')) {
-			$write.val($write.val().substring(0, $write.val().length - 1));
+			$text.val($text.val().substring(0, $text.val().length - 1));
+			$text.trigger("input");
 			return false;
 		}
 
@@ -70,19 +86,21 @@ $(function() {
 			character = "\n";
 		}
 
-		if (shift === true) {
-			$('.character span').toggle();
-			if (capslock === false) {
-				$('.letter').toggleClass('uppercase');
+		if (shift === true) {			
+			if(altctrl === false) {
+				$('.character span').toggle();
 			}
+			
+			$('.letter').toggleClass('uppercase');
 			shift = false;
 		}
-
+		
 		if (shift === false) {
 			$('#keyboard .shift').removeClass('active');
 		}
-
-		$write.val($write.val() + character);
+		
+		$text.val($text.val() + character);
+		$text.trigger("input");
 
 	});
 

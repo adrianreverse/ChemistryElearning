@@ -33,23 +33,23 @@
 }
 
 #keyboard .backspace {
-	width: 11.5rem;
+	width: 11.7rem;
 }
 
 #keyboard .tab {
-	width: 11.5rem;
+	width: 11.7rem;
 }
 
 #keyboard .capslock {
-	width: 12.5rem;
+	width: 12.6rem;
 }
 
 #keyboard .enter {
-	width: 11rem;
+	width: 11.1rem;
 }
 
 #keyboard .shift {
-	width: 15rem;
+	width: 15.1rem;
 }
 
 #keyboard .space {
@@ -72,6 +72,8 @@
     color: #fff;
 }
 
-.tab {
-    display: block;
+.on, .alt-ctrl-on {
+	display: none;
 }
+
+
