@@ -19,7 +19,7 @@ $(function() {
 		});
 	});
 
-	var $write = $('#message-content'), shift = false, capslock = false;
+	var $write = $('#message-content'), shift = false, capslock = false, altctrl=false;
 
 	$('#keyboard li').click(function() {
 		var $this = $(this), character = $this.html();
@@ -38,6 +38,13 @@ $(function() {
 			$this.toggleClass('active');
 			$('.letter').toggleClass('uppercase');
 			capslock = true;
+			return false;
+		}
+		
+		if ($this.hasClass('alt-ctrl')) {
+			$this.toggleClass('active');
+			$('.letter span').toggle();
+			altctrl = true;
 			return false;
 		}
 
