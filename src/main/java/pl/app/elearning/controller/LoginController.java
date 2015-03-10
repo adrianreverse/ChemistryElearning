@@ -44,6 +44,11 @@ public class LoginController {
 	// return userAccountService.isCredentialsCorrect(login, password).toString();
 	// }
 
+	@RequestMapping(value = "/keyboard", method = RequestMethod.GET)
+	public String keyboard() {
+		return "keyboard";
+	}
+
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		binder.setAllowedFields(new String[] { "login", "password" });

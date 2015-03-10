@@ -3,17 +3,31 @@
  */
 
 $(function() {
-	var $write = $('#write'), shift = false, capslock = false;
+	/**
+	 * Injects and displays keyboard after clicking on screen keyboard button
+	 */
+	$('#screen-keyboard').click(function() {
+		$.ajax({
+			type : "GET",
+			url : "keyboard",
+			success : function(response) {
+				$("#screen-keyboard-region").html(response);
+			},
+			error : function(error) {
+				console.log(error);
+			}
+		});
+	});
+
+	var $write = $('#message-content'), shift = false, capslock = false;
 
 	$('#keyboard li').click(function() {
 		var $this = $(this), character = $this.html();
 
-		if ($this.hasClass('left-shift') || $this.hasClass('right-shift')) {
-			$('#keyboard .left-shift').toggleClass('active');
-			$('#keyboard .right-shift').toggleClass('active');
-
+		if ($this.hasClass('shift')) {
+			$('#keyboard .shift').toggleClass('active');
 			$('.letter').toggleClass('uppercase');
-			$('.symbol span').toggle();
+			$('.character span').toggle();
 
 			shift = (shift === true) ? false : true;
 			capslock = false;
@@ -31,12 +45,12 @@ $(function() {
 			character = character.toUpperCase();
 		}
 
-		if ($this.hasClass('delete')) {
+		if ($this.hasClass('backspace')) {
 			$write.val($write.val().substring(0, $write.val().length - 1));
 			return false;
 		}
 
-		if ($this.hasClass('symbol')) {
+		if ($this.hasClass('character')) {
 			character = $('span:visible', $this).html();
 		}
 		if ($this.hasClass('space')) {
@@ -45,12 +59,12 @@ $(function() {
 		if ($this.hasClass('tab')) {
 			character = "\t";
 		}
-		if ($this.hasClass('return')) {
+		if ($this.hasClass('enter')) {
 			character = "\n";
 		}
 
 		if (shift === true) {
-			$('.symbol span').toggle();
+			$('.character span').toggle();
 			if (capslock === false) {
 				$('.letter').toggleClass('uppercase');
 			}
@@ -58,27 +72,20 @@ $(function() {
 		}
 
 		if (shift === false) {
-			$('#keyboard .left-shift').removeClass('active');
-			$('#keyboard .right-shift').removeClass('active');
+			$('#keyboard .shift').removeClass('active');
 		}
 
 		$write.val($write.val() + character);
 
 	});
 
-	/**
-	 * Injects and displays keyboard after clicking on screen keyboard button
-	 */
-	$('#screen-keyboard').click(function() {
-		$.ajax({
-			type : "GET",
-			url : "keyboard",
-			success : function(response) {
-				$("#screen-keyboard-region").html(response);
-			},
-			error : function(error) {
-				console.log(error);
-			}
-		});
+	$('#keyboard .shift.active').hover(function() {
+		$(this).css('color', '#fff');
+		$(this).css('background', '#fff');
 	});
+
+	$('#keyboard .capslock.active').hover(function() {
+		$(this).css('color', '#fff');
+	});
+
 });

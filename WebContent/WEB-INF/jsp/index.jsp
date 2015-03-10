@@ -11,11 +11,13 @@
 	<title>${appTitle}</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom.css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/keyboard.css" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mobile-device.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/keyboard.js"></script>
+	<script src="${pageContext.request.contextPath}/js/counter.js"></script>
 	<script src="${pageContext.request.contextPath}/js/js.js"></script>
 </head>
 <body class="body">
@@ -67,12 +69,13 @@
 				</security:authorize>
 
 			</div>
-		</div>
-		<button id="screen-keyboard">Klawiatura</button>
+					<button id="screen-keyboard">Klawiatura</button>
 		
 		<div id="screen-keyboard-region"> </div>
+		</div>
 
-		<%@ include file="footer.jsp"%>
+
+	<!-- 	<%@ include file="footer.jsp"%> -->
 
 	</div>
 

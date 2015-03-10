@@ -4,7 +4,7 @@
 $(function(){
 var maxLength = 10;
     
-    $( "#write" ).keyup(function() {
+    $( "#message-content" ).on('input', function() {
       var length = $(this).val().length; 
         console.log(length);
         
@@ -13,7 +13,7 @@ var maxLength = 10;
         }
         
         else if(length > maxLength) {
-            console.log("przekrocozno o " , (length-maxLength));
+            console.log("przekroczono o " , (length-maxLength));
         }
     });
 	

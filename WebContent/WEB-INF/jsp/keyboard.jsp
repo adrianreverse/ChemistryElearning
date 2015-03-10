@@ -13,6 +13,7 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="${pageContext.request.contextPath}/js/keyboard.js"></script>
+		<script src="${pageContext.request.contextPath}/js/counter.js"></script>
 		<script src="${pageContext.request.contextPath}/js/js.js"></script>
 	</head>
 <body>
@@ -20,60 +21,60 @@
 <textarea id="message-content" rows="4" cols="50" placeholder="Treść wiadomości">  </textarea>
 
 	<ul id="keyboard"> 
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class =	"backspace"><span>Backspace</span></li>
-		<li class =	"tab"><span>Tab</span></li>
-		<li class= "letter"><span>q</span></li>
-		<li class= "letter"><span>w</span></li>
-		<li class= "letter"><span>e</span></li>
-		<li class= "letter"><span>r</span></li>
-		<li class= "letter"><span>t</span></li>
-		<li class= "letter"><span>y</span></li>
-		<li class= "letter"><span>u</span></li>
-		<li class= "letter"><span>i</span></li>
-		<li class= "letter"><span>o</span></li>
-		<li class= "letter"><span>p</span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "capslock"></li>
-		<li class= "letter"><span>a</span></li>
-		<li class= "letter"><span>s</span></li>
-		<li class= "letter"><span>d</span></li>
-		<li class= "letter"><span>f</span></li>
-		<li class= "letter"><span>g</span></li>
-		<li class= "letter"><span>h</span></li>
-		<li class= "letter"><span>j</span></li>
-		<li class= "letter"><span>k</span></li>
-		<li class= "letter"><span>l</span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class =	"enter"><span>Enter</span></li>
-		<li class = "shift"><span>Shift</span></li>
-		<li class= "letter"><span>z</span></li>
-		<li class= "letter"><span>x</span></li>
-		<li class= "letter"><span>c</span></li>
-		<li class= "letter"><span>v</span></li>
-		<li class= "letter"><span>b</span></li>
-		<li class= "letter"><span>n</span></li>
-		<li class= "letter"><span>m</span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class = "character"><span></span><span></span></li>
-		<li class =	"shift"></li>
-		<li class =	"space"></li>		
+		<li class="character"><span class="off">`</span><span class="on">~</span></li>
+		<li class="character"><span class="off">1</span><span class="on">!</span></li>
+		<li class="character"><span class="off">2</span><span class="on">@</span></li>
+		<li class="character"><span class="off">3</span><span class="on">#</span></li>
+		<li class="character"><span class="off">4</span><span class="on">$</span></li>
+		<li class="character"><span class="off">5</span><span class="on">%</span></li>
+		<li class="character"><span class="off">6</span><span class="on">^</span></li>
+		<li class="character"><span class="off">7</span><span class="on">&amp;</span></li>
+		<li class="character"><span class="off">8</span><span class="on">*</span></li>
+		<li class="character"><span class="off">9</span><span class="on">(</span></li>
+		<li class="character"><span class="off">0</span><span class="on">)</span></li>
+		<li class="character"><span class="off">-</span><span class="on">_</span></li>
+		<li class="character"><span class="off">=</span><span class="on">+</span></li>
+		<li class="backspace">Backspace</li>
+		<li class="tab new-line">Tab</li>
+		<li class="letter">q</li>
+		<li class="letter">w</li>
+		<li class="letter">e</li>
+		<li class="letter">r</li>
+		<li class="letter">t</li>
+		<li class="letter">y</li>
+		<li class="letter">u</li>
+		<li class="letter">i</li>
+		<li class="letter">o</li>
+		<li class="letter">p</li>
+		<li class="character"><span class="off">[</span><span class="on">{</span></li>
+		<li class="character"><span class="off">]</span><span class="on">}</span></li>
+		<li class="character"><span class="off">\</span><span class="on">|</span></li>
+		<li class="capslock new-line">Caps lock</li>
+		<li class="letter">a</li>
+		<li class="letter">s</li>
+		<li class="letter">d</li>
+		<li class="letter">f</li>
+		<li class="letter">g</li>
+		<li class="letter">h</li>
+		<li class="letter">j</li>
+		<li class="letter">k</li>
+		<li class="letter">l</li>
+		<li class="character"><span class="off">;</span><span class="on">:</span></li>
+		<li class="character"><span class="off">'</span><span class="on">&quot;</span></li>
+		<li class="enter last">Enter</li>
+		<li class="shift new-line">Shift</li>
+		<li class="letter">z</li>
+		<li class="letter">x</li>
+		<li class="letter">c</li>
+		<li class="letter">v</li>
+		<li class="letter">b</li>
+		<li class="letter">n</li>
+		<li class="letter">m</li>
+		<li class="character"><span class="off">,</span><span class="on">&lt;</span></li>
+		<li class="character"><span class="off">.</span><span class="on">&gt;</span></li>
+		<li class="character"><span class="off">/</span><span class="on">?</span></li>
+		<li class="shift">Shift</li>
+		<li class="space"></li>		
 	</ul>
 
 
