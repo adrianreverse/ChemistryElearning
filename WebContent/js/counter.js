@@ -2,20 +2,24 @@
  * counter of characters in message textarea
  */
 $(function(){
-var maxLength = 10;
+	var maxLength = 10;
     
-    $( "#message-content" ).on('input', function() {
-      var length = $(this).val().length; 
+    $("#message-content").on('input', function() {
+      var $this = $(this), length = $this.val().length; 
         console.log(length);
+      //nalzey zmienic na operowanie widocznoscia a nie tak jak jest teraz.
+        $(".counter-content").remove();
         
         if(length === maxLength) {
-         console.log("pozostalolo" , 0);
+        	$(content("pozostalo: ", 0)).insertAfter($this);
         }
-        
         else if(length > maxLength) {
-            console.log("przekroczono o " , (length-maxLength));
+        	$(content("przekroczono o: ", length-maxLength)).insertAfter($this);
         }
     });
-	
-	
+
 });
+
+function content(text, value) {
+	return "<div class='counter-content'><span>"+text+"</span><span>"+value+"</span></div>";
+}
