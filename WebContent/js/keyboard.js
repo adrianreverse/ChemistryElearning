@@ -61,9 +61,6 @@ $(function() {
 			return false;
 		}
 
-		if ($this.hasClass('uppercase')) {
-			character = character.toUpperCase();
-		}
 
 		if ($this.hasClass('backspace')) {
 			$text.val($text.val().substring(0, $text.val().length - 1));
@@ -71,9 +68,14 @@ $(function() {
 			return false;
 		}
 
-		if ($this.hasClass('character')) {
+		if ($this.hasClass('character') || $this.hasClass('letter')) {
 			character = $('span:visible', $this).html();
 		}
+		
+		if ($this.hasClass('uppercase')) {
+			character = character.toUpperCase();
+		}
+		
 		if ($this.hasClass('space')) {
 			character = ' ';
 		}
