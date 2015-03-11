@@ -11,11 +11,8 @@ $(function() {
 			text = "pozostalo: ";
 		} else if (length > maxLength) {
 			text = "przekroczono o: ";
-		} else if (length < maxLength) {
-			$(".counter-content").css('display', 'none');
 		}
 			
-		$(".counter-content").css('display', 'block');
 		$(".counter-text").html(text);
 		$(".counter-number").html(value);
 	});

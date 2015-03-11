@@ -22,7 +22,10 @@
 	</head>
 <body>
 
-<textarea id="message-content" rows="4" cols="50" placeholder="Treść wiadomości..."></textarea>
+<form id="new-message-form">
+	<input id="message-title" placeholder="Temat wiadomości" class="form-control" type="text"/>
+	<textarea id="message-content" rows="12" placeholder="Treść wiadomości..."></textarea>
+</form>
 
 <div class="counter-content"><span class="counter-text"></span><span class="counter-number"></span></div>
 	
