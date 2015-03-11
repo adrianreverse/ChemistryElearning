@@ -1,25 +1,26 @@
 /**
  * counter of characters in message textarea
  */
-$(function(){
+$(function() {
 	var maxLength = 10;
-    
-    $("#message-content").on('input', function() {
-      var $this = $(this), length = $this.val().length; 
-        console.log(length);
-      //nalzey zmienic na operowanie widocznoscia a nie tak jak jest teraz.
-        $(".counter-content").remove();
-        
-        if(length === maxLength) {
-        	$(content("pozostalo: ", 0)).insertAfter($this);
-        }
-        else if(length > maxLength) {
-        	$(content("przekroczono o: ", length-maxLength)).insertAfter($this);
-        }
-    });
 
+	$("#message-content").on('input', function() {
+		var $this = $(this), length = $this.val().length, text, value;
+
+		if (length === maxLength) {
+			text = "pozostalo: ";
+			value = 0;
+		} else if (length > maxLength) {
+			text = "przekroczono o: ";
+			value = length - maxLength;
+		} else if (length < maxLength) {
+			$(".counter-content").css('display', 'none');
+		}
+
+		if (text !== undefined && value !== undefined) {
+			$(".counter-content").css('display', 'block');
+			$(".counter-text").html(text);
+			$(".counter-number").html(value);
+		}
+	});
 });
-
-function content(text, value) {
-	return "<div class='counter-content'><span>"+text+"</span><span>"+value+"</span></div>";
-}

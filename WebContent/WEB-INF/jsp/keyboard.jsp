@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/keyboard.css" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/message.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/counter.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -21,8 +22,10 @@
 	</head>
 <body>
 
-<textarea id="message-content" rows="4" cols="50" placeholder="Treść wiadomości">  </textarea>
- 
+<textarea id="message-content" rows="4" cols="50" placeholder="Treść wiadomości..."></textarea>
+
+<div class="counter-content"><span class="counter-text"></span><span class="counter-number"></span></div>
+	
 	<ul id="keyboard"> 
 		<li class="character"><span class="off">`</span><span class="on">~</span></li>
 		<li class="character"><span class="off">1</span><span class="on">!</span></li>
