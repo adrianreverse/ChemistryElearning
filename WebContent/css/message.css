@@ -8,5 +8,4 @@
 #message-content:focus {
 	outline: none !important;
     border: 0.1rem solid #ff6600;
-   /* box-shadow: 0 0 1rem #719ECE; */
 }

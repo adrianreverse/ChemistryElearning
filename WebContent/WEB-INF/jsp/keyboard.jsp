@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -79,67 +81,6 @@
 		<li class="space"></li>
 		<li class="alt-ctrl">Alt + Ctrl</li>	
 	</ul>
-	 
-	 <!--
-	 	<ul id="keyboard"> 
-		<li class="character"><span class="off">`</span><span class="on">~</span></li>
-		<li class="character"><span class="off">1</span><span class="on">!</span></li>
-		<li class="character"><span class="off">2</span><span class="on">@</span></li>
-		<li class="character"><span class="off">3</span><span class="on">#</span></li>
-		<li class="character"><span class="off">4</span><span class="on">$</span></li>
-		<li class="character"><span class="off">5</span><span class="on">%</span></li>
-		<li class="character"><span class="off">6</span><span class="on">^</span></li>
-		<li class="character"><span class="off">7</span><span class="on">&amp;</span></li>
-		<li class="character"><span class="off">8</span><span class="on">*</span></li>
-		<li class="character"><span class="off">9</span><span class="on">(</span></li>
-		<li class="character"><span class="off">0</span><span class="on">)</span></li>
-		<li class="character"><span class="off">-</span><span class="on">_</span></li>
-		<li class="character"><span class="off">=</span><span class="on">+</span></li>
-		<li class="backspace">Backspace</li>
-		<li class="tab">Tab</li>
-		<li class="letter">q</li>
-		<li class="letter">w</li>
-		<li class="letter">e</li>
-		<li class="letter">r</li>
-		<li class="letter">t</li>
-		<li class="letter">y</li>
-		<li class="letter">u</li>
-		<li class="letter">i</li>
-		<li class="letter">o</li>
-		<li class="letter">p</li>
-		<li class="character"><span class="off">[</span><span class="on">{</span></li>
-		<li class="character"><span class="off">]</span><span class="on">}</span></li>
-		<li class="character"><span class="off">\</span><span class="on">|</span></li>
-		<li class="capslock">Caps lock</li>
-		<li class="letter">a</li>
-		<li class="letter">s</li>
-		<li class="letter">d</li>
-		<li class="letter">f</li>
-		<li class="letter">g</li>
-		<li class="letter">h</li>
-		<li class="letter">j</li>
-		<li class="letter">k</li>
-		<li class="letter">l</li>
-		<li class="character"><span class="off">;</span><span class="on">:</span></li>
-		<li class="character"><span class="off">'</span><span class="on">&quot;</span></li>
-		<li class="enter last">Enter</li>
-		<li class="shift">Shift</li>
-		<li class="letter">z</li>
-		<li class="letter">x</li>
-		<li class="letter">c</li>
-		<li class="letter">v</li>
-		<li class="letter">b</li>
-		<li class="letter">n</li>
-		<li class="letter">m</li>
-		<li class="character"><span class="off">,</span><span class="on">&lt;</span></li>
-		<li class="character"><span class="off">.</span><span class="on">&gt;</span></li>
-		<li class="character"><span class="off">/</span><span class="on">?</span></li>
-		<li class="shift">Shift</li>
-		<li class="alt-ctrl">Alt + Ctrl</li>	
-		<li class="space"></li>
-		<li class="alt-ctrl">Alt + Ctrl</li>	
-	</ul>-->
-
 
 </body>
 </html>
