@@ -104,7 +104,7 @@ $(function() {
 	});
 	
 	$('#close-keyboard').click(function() {
-		$('#screen-keyboard-region').css('display', 'none');
+		$('.screen-keyboard').remove();
 	});
 
 });
