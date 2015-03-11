@@ -10,6 +10,11 @@
     margin-right: auto;
     margin-top: 2rem;
     border-radius: 0.3rem;
+   
+}
+
+.screen-keyboard {
+	position: relative;
 }
 
 #keyboard li {
@@ -75,6 +80,17 @@
 
 .on, .alt-ctrl-on {
 	display: none;
+}
+
+#close-keyboard {
+	display: block;
+    position: absolute;
+    top: -1.8rem;
+    right: 6rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url('http://cdn-sg1.pgimgs.com/images/pg/close-button.png') no-repeat center center;
+    cursor: pointer;
 }
 
 

@@ -29,6 +29,9 @@
 
 <div class="counter-content"><span class="counter-text"></span><span class="counter-number"></span></div>
 	
+
+<div class="screen-keyboard">
+	<div id="close-keyboard"></div>
 	<ul id="keyboard"> 
 		<li class="character"><span class="off">`</span><span class="on">~</span></li>
 		<li class="character"><span class="off">1</span><span class="on">!</span></li>
@@ -87,6 +90,7 @@
 		<li class="space"></li>
 		<li class="alt-ctrl">Alt + Ctrl</li>	
 	</ul>
+	</div>
 
 </body>
 </html>

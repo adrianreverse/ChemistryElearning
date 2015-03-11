@@ -102,5 +102,9 @@ $(function() {
 		$text.trigger("focus").trigger("input");
 
 	});
+	
+	$('#close-keyboard').click(function() {
+		$('#screen-keyboard-region').css('display', 'none');
+	});
 
 });
