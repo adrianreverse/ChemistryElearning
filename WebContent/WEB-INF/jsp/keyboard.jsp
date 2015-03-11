@@ -23,7 +23,7 @@
 <body>
 
 <form id="new-message-form">
-	<input id="message-title" placeholder="Temat wiadomości" class="form-control" type="text"/>
+	<input id="message-title" placeholder="Temat wiadomości" class="form-control" type="text" maxlength="150"/>
 	<textarea id="message-content" rows="12" placeholder="Treść wiadomości..."></textarea>
 </form>
 
