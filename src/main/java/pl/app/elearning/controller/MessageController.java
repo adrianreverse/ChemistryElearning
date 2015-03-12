@@ -11,4 +11,10 @@ public class MessageController {
 	public String messagePage() {
 		return "message";
 	}
+
+	@RequestMapping(value = "/messages/new", method = RequestMethod.GET)
+	public String newMessagePage() {
+		return "messageform";
+	}
+
 }

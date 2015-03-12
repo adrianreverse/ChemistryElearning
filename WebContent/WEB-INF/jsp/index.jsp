@@ -72,13 +72,11 @@
 				</security:authorize>
 
 			</div>
-					<button id="screen-keyboard">Klawiatura</button>
-		
-		<div id="screen-keyboard-region"> </div>
+
 		</div>
 
 
-	<!-- 	<%@ include file="footer.jsp"%> -->
+	 	<%@ include file="footer.jsp"%> 
 
 	</div>
 

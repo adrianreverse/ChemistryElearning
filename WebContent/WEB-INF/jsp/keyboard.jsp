@@ -23,13 +23,6 @@
 	</head>
 <body>
 
-<form id="new-message-form">
-	<input id="message-title" name="message_title" placeholder="Temat wiadomości" class="form-control" type="text" maxlength="150"/>
-	<textarea id="message-content" name="message_content" rows="12" placeholder="Treść wiadomości..."></textarea>
-</form>
-
-<div class="counter-content"><span class="counter-text"></span><span class="counter-number"></span></div>
-	
 
   <div class="screen-keyboard">
  	<div id="close-keyboard"></div>

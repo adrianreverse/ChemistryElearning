@@ -44,8 +44,8 @@ public class LoginController {
 	// return userAccountService.isCredentialsCorrect(login, password).toString();
 	// }
 
-	@RequestMapping(value = "/keyboard", method = RequestMethod.GET)
-	public String keyboard() {
+	@RequestMapping(value = "/messages/keyboard", method = RequestMethod.GET)
+	public String openKeyboard() {
 		return "keyboard";
 	}
 
