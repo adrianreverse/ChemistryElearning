@@ -19,6 +19,7 @@ $(function() {
 		});
 	});
 
+	
 	var $text = $('#message-content'), shift = false, capslock = false, altctrl = false;
 
 	$('#keyboard li').click(function() {

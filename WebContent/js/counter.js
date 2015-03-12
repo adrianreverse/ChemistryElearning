@@ -12,7 +12,7 @@ $(function() {
 		} else if (length > maxLength) {
 			text = "przekroczono o: ";
 		}
-			
+		$(".counter-content").css('display', 'block');
 		$(".counter-text").html(text);
 		$(".counter-number").html(value);
 	});

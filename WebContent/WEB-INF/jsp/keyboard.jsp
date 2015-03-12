@@ -18,13 +18,14 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="${pageContext.request.contextPath}/js/keyboard.js"></script>
 		<script src="${pageContext.request.contextPath}/js/counter.js"></script>
+		<script src="${pageContext.request.contextPath}/js/message.js"></script>
 		<script src="${pageContext.request.contextPath}/js/js.js"></script>
 	</head>
 <body>
 
 <form id="new-message-form">
-	<input id="message-title" placeholder="Temat wiadomości" class="form-control" type="text" maxlength="150"/>
-	<textarea id="message-content" rows="12" placeholder="Treść wiadomości..."></textarea>
+	<input id="message-title" name="message_title" placeholder="Temat wiadomości" class="form-control" type="text" maxlength="150"/>
+	<textarea id="message-content" name="message_content" rows="12" placeholder="Treść wiadomości..."></textarea>
 </form>
 
 <div class="counter-content"><span class="counter-text"></span><span class="counter-number"></span></div>
