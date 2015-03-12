@@ -18,6 +18,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.validator.constraints.Email;
 
+import pl.app.elearning.domain.mode.Mode;
+
 //@ScriptAssert(lang = "javascript", script = "_this.passwordConfirmation.equals(_this.password)", message = "account.password.mismatch.message")
 @Entity
 @Table(name = "USER")
@@ -77,7 +79,7 @@ public class UserAccount implements Serializable {
 	}
 
 	@OneToMany(mappedBy = "user")
-	List<Message> modes;
+	List<Mode> modes;
 
 	public int getId() {
 		return id;
@@ -156,7 +158,7 @@ public class UserAccount implements Serializable {
 		this.passwordConfirmation = passwordConfirmation;
 	}
 
-	public List<Message> getModes() {
+	public List<Mode> getModes() {
 		return modes;
 	}
 

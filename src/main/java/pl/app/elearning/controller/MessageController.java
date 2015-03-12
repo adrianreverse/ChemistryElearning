@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MessageController {
 
-	@RequestMapping(value = "/messages", method = RequestMethod.GET)
+	@RequestMapping(value = "/m", method = RequestMethod.GET)
 	public String messagePage() {
-		return "message";
+		return "m";
 	}
 }

@@ -12,6 +12,7 @@
 		<remember-me />
 		<logout logout-success-url="/home" delete-cookies="JSESSIONID" />
 		<intercept-url pattern="/account*" access="isAuthenticated()"/>
+	<!--		<intercept-url pattern="/messages*" access="isAuthenticated()"/>-->
 	<!--	<access-denied-handler error-page="/home"/>
   -->
 	</http>
