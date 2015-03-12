@@ -33,7 +33,7 @@
 					</a></li>
 					<security:authorize access="isAuthenticated()">
 						<li><a class="btn btn-link navbar-link messages" href="${pageContext.request.contextPath}/messages">
-						Messages</a><span id="message-counter"></span></li>
+						Messages</a><span id="message-counter">99</span></li>
 						<c:if test="${!fn:contains(url, accountUrl)}">
 							<li><a class="btn btn-link navbar-link konto" href="${pageContext.request.contextPath}/account">
 								My account</a></li>

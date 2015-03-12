@@ -29,9 +29,6 @@ $(function() {
 		errorPlacement : function(error, element) {
 			$(error).addClass('form-alert');
 			error.insertAfter(element);
-		}
-		
+		}	
 	});
-	
-	
 });
