@@ -32,6 +32,8 @@
 							<spring:message code="navbar.link.home" />
 					</a></li>
 					<security:authorize access="isAuthenticated()">
+						<li><a class="btn btn-link navbar-link messages" href="${pageContext.request.contextPath}/messages">
+						Messages</a><span id="message-counter"></span></li>
 						<c:if test="${!fn:contains(url, accountUrl)}">
 							<li><a class="btn btn-link navbar-link konto" href="${pageContext.request.contextPath}/account">
 								My account</a></li>

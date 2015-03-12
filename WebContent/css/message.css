@@ -33,5 +33,14 @@
     border: 0.1rem solid #ff6600;
 }
 
+#message-counter {
+	display: block;
+    position: absolute;
+    top: -0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url('http://cdn-sg1.pgimgs.com/images/pg/close-button.png') no-repeat center center;
+}
+
 
 
