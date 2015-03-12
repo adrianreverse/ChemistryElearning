@@ -63,7 +63,8 @@
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
 	height: 8rem;
-	position: relative;
+	position: absolute;
+	width: 95%;
 }
 
 .img-thumbnail.mode-images {

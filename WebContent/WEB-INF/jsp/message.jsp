@@ -20,9 +20,10 @@
 	<script src="${pageContext.request.contextPath}/js/js.js"></script>
 </head>
 <body class="body">
-<div id="layout-region" class="container elearning-container">
-<%@ include file="navbar.jsp"%>
-<a href="messages/new" id="new-message-button"><span>message</span></a>
+	<div id="layout-region" class="container elearning-container">
+		<%@ include file="navbar.jsp"%>
+		<a href="messages/new" id="new-message-button"><span>message</span></a>
+		<%@ include file="footer.jsp"%> 
 </div>
 </body>
 </html>

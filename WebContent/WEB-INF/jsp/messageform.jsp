@@ -38,7 +38,7 @@
 		<input id="message-title" name="message_title"
 			placeholder="Temat wiadomości" class="form-control" type="text"
 			maxlength="150" />
-		<textarea id="message-content" name="message_content" rows="12"
+		<textarea id="message-content" name="message_content" rows="10"
 			placeholder="Treść wiadomości..."></textarea>
 	</form>
 
@@ -49,6 +49,8 @@
 	<button id="screen-keyboard">Klawiatura</button>
 
 	<div id="screen-keyboard-region"></div>
+	
+	<%@ include file="footer.jsp"%> 
 </div>
 </body>
 </html>
