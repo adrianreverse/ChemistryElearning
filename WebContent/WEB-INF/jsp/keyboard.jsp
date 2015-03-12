@@ -32,7 +32,7 @@
 	
 
   <div class="screen-keyboard">
- 	<span id="close-keyboard"></span>
+ 	<div id="close-keyboard"></div>
 	<ul id="keyboard"> 
 		<li class="character"><span class="off">`</span><span class="on">~</span></li>
 		<li class="character"><span class="off">1</span><span class="on">!</span></li>
