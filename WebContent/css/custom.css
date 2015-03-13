@@ -6,8 +6,7 @@
 
 #layout-region {
 	background-color: #fff;
-	padding-right: 0px;
-	padding-left: 0px;
+	padding: 0rem 0rem 3rem;
 	width: 95%;
 }
 
@@ -79,6 +78,10 @@
 .row.mode {
 	/*	margin-top: 3em;
 	margin-bottom: 3em;*/
+	/*padding-left: 10%;*/
+	
+	  margin-left: 1rem;
+  margin-right: 1rem;
 	
 }
 
@@ -87,6 +90,7 @@
 	margin-bottom: 1em;
 	width: 15em;
 	height: 3em;
+	display: block;
 }
 
 .btn.btn-default.exam {
@@ -187,4 +191,20 @@ a:hover {
 .ce-disabled {
 	pointer-events: none;
 	opacity: 0.6;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+   	margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 2rem;
+    padding-right:2rem;
 }

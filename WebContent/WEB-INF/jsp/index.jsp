@@ -37,12 +37,12 @@
 					</div>
 				</div>
 
-				<div class="row mode">
-					<div class="col-sm-3 col-sm-push-2">
+				<div class="row mode row-centered">
+					<div class="col-centered">
 						<img src="img/laboratory.png" class="img-thumbnail mode-images">
 						<a class="btn btn-success learn acitve" href="#learn">${learnButton}</a>
 					</div>
-					<div class="col-sm-3 col-sm-push-2">
+					<div class="col-centered">
 						<security:authorize access="isAuthenticated()">
 							<img src="img/laboratory.png" class="img-thumbnail mode-images">
 							<a class="btn btn-primary sample-test" href="#test">${sampleTestButton}</a>
@@ -53,7 +53,7 @@
 							<a class="btn btn-primary sample-test ce-disabled" href="${pageContext.request.contextPath}/account">${sampleTestButton}</a>
 						</security:authorize>
 					</div>
-					<div class="col-sm-3 col-sm-push-2">
+					<div class="col-centered">
 						<security:authorize access="isAuthenticated()">
 							<img src="img/laboratory.png" class="img-thumbnail mode-images">
 							<a class="btn btn-default exam" href="#exam">${examButton}</a>
