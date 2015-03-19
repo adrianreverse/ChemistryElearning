@@ -4,7 +4,6 @@
 	resize: none;
 	border-radius: 0.3rem;
 	display: block;
-	margin-bottom: 1rem;
 	width: 100%;
 	padding: 0.6rem 1.2rem;
 	border: 0.1rem solid #a9a9a9;
@@ -26,26 +25,30 @@
 	margin: 2rem auto 1rem auto;
 }
 
-.message-form {
-	position: relative;
-}
-
 #message-content:focus, #message-title:focus {
 	outline: none !important;
-    border: 0.1rem solid #ff6600;
+	border: 0.1rem solid #ff6600;
 }
 
 #message-counter {
 	display: block;
-    position: absolute;
-    top: 0.1rem;
-    width: 2.2rem;
-    height: 2.2rem;
-    background: #fff;
-    border-radius: 50%;
-    border: 0.1rem solid #b20000;
-    text-align: center;
+	position: absolute;
+	top: 0.1rem;
+	width: 2.2rem;
+	height: 2.2rem;
+	background: #fff;
+	border-radius: 50%;
+	border: 0.1rem solid #b20000;
+	text-align: center;
 }
 
+.counter-message-content {
+	position: relative;
+}
 
-
+.new-message-page-title {
+	border-bottom: 0.1rem solid #dddddd;
+	padding-bottom: 1.5rem;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}

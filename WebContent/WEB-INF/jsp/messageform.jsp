@@ -35,42 +35,43 @@
 	<div id="layout-region" class="container elearning-container">
 		<%@ include file="navbar.jsp"%>
 
+		<div class="new-message-page-title">Nowa wiadomość</div>
 		<div class="message-form">
-			<form class="form-horizontal" id="new-message-form" role="form"
-				method="POST">
+			<form id="new-message-form" role="form" method="POST">
 				<div class="form-group">
 					<input id="message-title" name="message_title" class="form-control"
 						placeholder="Temat wiadomości" class="form-control" type="text"
 						maxlength="150" />
 				</div>
-				<div class="form-group">
+				<div class="form-group counter-message-content">
 					<textarea id="message-content" name="message_content" rows="10"
 						class="form-control" placeholder="Treść wiadomości..."></textarea>
+					<div class="counter-content">
+						<div class="counter-elements">
+							<span class="counter-text"></span><span class="counter-number"></span>
+						</div>
+					</div>
 				</div>
-				<div class="pull-right">
-					<div class="form-group">
+				<div class="pull-right btn-toolbar">
+					<div class="btn-group" role="group">
 						<button type="submit" id="cancel-new-message-form-button"
 							class="btn btn-default">Anuluj</button>
 					</div>
-					<div class="form-group">
+					<div class="btn-group" role="group">
 						<button type="submit" id="send-new-message-form-button"
 							class="btn btn-success">Wyślij</button>
 					</div>
 				</div>
 			</form>
-
-			<div class="counter-content">
-				<div class="counter-elements">
-					<span class="counter-text"></span><span class="counter-number"></span>
-				</div>
-			</div>
 		</div>
- 
+
 		<div class="screen-keyboard-btn">
 			<div class="screen-keyboard-btn-element">
 				<button id="open-screen-keyboard" class="btn btn-primary">Klawiatura</button>
 			</div>
 		</div>
+
+		<div class="horizontal-line"></div>
 
 		<div id="screen-keyboard-region"></div>
 
