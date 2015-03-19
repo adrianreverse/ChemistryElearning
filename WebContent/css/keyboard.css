@@ -93,4 +93,18 @@
     text-align: center;
 }
 
+.screen-keyboard-btn {
+	display: block;
+	width: 60%;
+	margin: 1rem auto 1rem auto;
+}
+
+.screen-keyboard-btn-element {
+	/*float: right; */
+}
+
+#open-screen-keyboard {
+	
+}
+
 

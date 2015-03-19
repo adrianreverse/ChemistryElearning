@@ -2,8 +2,10 @@
 
 .counter-content {
 	display: none;
-	width: 60%;
+	width: 100%;
 	margin: 1rem auto 1rem auto;
+	position: absolute;
+  	top: 23rem;
 }
 
 .counter-elements {
