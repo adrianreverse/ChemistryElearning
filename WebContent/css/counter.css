@@ -2,4 +2,10 @@
 
 .counter-content {
 	display: none;
+	width: 60%;
+	margin: 1rem auto 1rem auto;
+}
+
+.counter-elements {
+	float: right;
 }

@@ -6,12 +6,15 @@ $(function() {
 	/**
 	 * Injects and displays keyboard after clicking on screen keyboard button
 	 */
-	$('#screen-keyboard').click(function() {
+	$('#open-screen-keyboard').click(function() {
 		$.ajax({
 			type : "GET",
 			url : "keyboard",
 			success : function(response) {
 				$("#screen-keyboard-region").html(response);
+				$("#open-screen-keyboard").hide();
+				keyboard();
+				closeKeyboard();
 			},
 			error : function(error) {
 				console.log(error);
@@ -19,7 +22,7 @@ $(function() {
 		});
 	});
 
-	
+function keyboard() {
 	var $text = $('#message-content'), shift = false, capslock = false, altctrl = false;
 
 	$('#keyboard li').click(function() {
@@ -103,9 +106,13 @@ $(function() {
 		$text.trigger("focus").trigger("input");
 
 	});
-	
+}
+
+function closeKeyboard() {
 	$('#close-keyboard').click(function() {
 		$('.screen-keyboard').remove();
+		$("#open-screen-keyboard").show();
 	});
+}
 
 });

@@ -43,10 +43,12 @@
 	</form>
 
 	<div class="counter-content">
-		<span class="counter-text"></span><span class="counter-number"></span>
+		<div class="counter-elements">
+			<span class="counter-text"></span><span class="counter-number"></span>
+		</div>
 	</div>
 
-	<button id="screen-keyboard">Klawiatura</button>
+	<button id="open-screen-keyboard">Klawiatura</button>
 
 	<div id="screen-keyboard-region"></div>
 	
