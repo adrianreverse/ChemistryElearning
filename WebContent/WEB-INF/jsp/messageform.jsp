@@ -71,8 +71,6 @@
 			</div>
 		</div>
 
-		<div class="horizontal-line"></div>
-
 		<div id="screen-keyboard-region"></div>
 
 		<%@ include file="footer.jsp"%>
