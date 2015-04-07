@@ -24,7 +24,7 @@
 .navbar-brand {
 	padding: 7px;
 }
-/*to jest ta zmiana*/
+
 .btn.btn-link.navbar-link {
 	color: #fff;
 }
@@ -76,13 +76,8 @@
 }
 
 .row.mode {
-	/*	margin-top: 3em;
-	margin-bottom: 3em;*/
-	/*padding-left: 10%;*/
-	
-	  margin-left: 1rem;
-  margin-right: 1rem;
-	
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .row.mode .btn {
@@ -95,32 +90,12 @@
 
 .btn.btn-default.exam {
 	background-color: #e9e9e9;
-	/*color: #fff;*/
 }
 
 .modal {
 	display: block;
 }
 
-/*
-.popover.fade.right.in {
-	width: 150px;
-}
-
-.popover-content {
-	padding: 2px 2px 2px 2px;
-}
-
-.popover {
-	 box-shadow: 5px 5px 5px #888888;
-	 border: yellow;
-  /* background: #eb6c5f; */ /* #E74C3C;*/
-/*}
-
-.popover.right .arrow:after {
-  border-right-color: #eb6c5f; // #E74C3C;
-}
-*/
 .alert.form-alert {
 	padding: 1px;
 }
@@ -195,16 +170,22 @@ a:hover {
 
 /* centered columns styles */
 .row-centered {
-    text-align:center;
+	text-align: center;
 }
+
 .col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-   	margin-left: 3rem;
-    margin-right: 3rem;
-    padding-left: 2rem;
-    padding-right:2rem;
+	display: inline-block;
+	float: none;
+	text-align: left;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.alert-container {
+	width: 30%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import pl.app.elearning.domain.UserAccount;
 import pl.app.elearning.service.UserAccountService;
+import pl.app.elearning.support.JsonResponse;
 
 @Controller
 public class RegistrationController {
@@ -34,15 +35,20 @@ public class RegistrationController {
 		return REGISTRATION_PAGE;
 	}
 
-	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
-	public String postRegistrationForm(@ModelAttribute("account") @Valid UserAccount userAccount, BindingResult result) {
+	@RequestMapping(value = "/registerUser", method = RequestMethod.POST, produces = "application/json")
+	@ResponseBody
+	// @ModelAttribute("account") @Valid
+	public JsonResponse postRegistrationForm(@Valid @RequestBody UserAccount userAccount, BindingResult result) {
 		boolean valid = userAccountService.createAccount(userAccount, result);
 		if (valid) {
 			log.info("Account is created");
-			return "redirect:/home";
+			System.out.println("ok");
+			return new JsonResponse("ok", "brak bledow");
+		} else {
+			log.info("Error occurs during creating account");
+			System.out.println("abc failed");
+			return new JsonResponse("abc failed", "bledy");
 		}
-		log.info("Error occurs during creating account");
-		return "";
 	}
 
 	@RequestMapping(value = "/availableLogin")

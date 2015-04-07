@@ -10,6 +10,8 @@ $(function() {
 			success : function(response) {
 				$("#registration-form-region").html(response);
 				$("#modal-registration-window").modal("show");
+				validateRegistrationForm();
+				sendRegistrationFormData();
 			},
 			error : function(error) {
 				console.log(error);
@@ -18,7 +20,7 @@ $(function() {
 	});
 });
 
-$(function() {
+function validateRegistrationForm() {
 	$('#js-register-form').validate({
 		rules : {
 			name : {
@@ -95,4 +97,48 @@ $(function() {
 			}
 		}
 	});
-});
+}
+
+function sendRegistrationFormData() {	
+	$('#js-register-form').submit(function(e) {
+		
+		var name,
+			surname,
+			login,
+			email,
+			password,
+			passwordConfirmation, 
+			data;
+		
+		name = $('#name').val();
+	    surname = $('#surname').val();
+	    login = $('#login').val();
+	    email = $('#email').val();
+	    password = $('#password').val();
+	    passwordConfirmation = $('#passwordConfirmation').val();
+	    data = { "name" : name, "surname" : surname, "login" : login, "email" : email, "password" : password, "passwordConfirmation" : passwordConfirmation};
+				     
+	    $.ajax({
+			type: 'POST',
+			url:  $(this).attr('action'),
+			data: JSON.stringify(data),
+			contentType: 'application/json',
+			dataType: 'json',
+				          
+			success: function(response, status, xhr) {
+				 	if(response.status=='ok') {
+				 		$('#modal-registration-window').hide();
+				 		setAlert("success", "Account was created");
+					} else {
+					    alert('nie udalo sie utworzyc uzytkownika' + ',' + response.status + ',' + response.errorMessage);
+					 }
+			},
+			error: function(response) {
+				    console.log(response);				    		
+			}
+		});
+	    
+		e.preventDefault();
+	});
+
+}

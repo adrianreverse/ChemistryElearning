@@ -3,19 +3,6 @@
 
 <%@ include file="messages.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${appTitle}</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-  	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom.css"/>
-  	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mobile-device.css"/>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  	<script src="${pageContext.request.contextPath}/js/registration.js"></script>
-</head>
-<body>
 
 
 <div class="modal fade" id="modal-registration-window" role="dialog">
@@ -29,7 +16,7 @@
       </div>
       <div class="modal-body">
 		<div id="registration-form"> 
-		  	<form:form class="form-horizontal" id="js-register-form" role="form" method="POST" action="/ChemistryElearning/registerUser" modelAttribute="account">
+		  	<form:form class="form-horizontal" id="js-register-form" role="form" method="POST" action="${pageContext.request.contextPath}/registerUser" modelAttribute="account">
 			  <div class="form-group">
 			    <label class="control-label col-sm-4" for="name">${nameLabel}</label>
 			    <div class="col-sm-5">
@@ -77,6 +64,3 @@
     </div>
   </div>
 </div>
-
-</body>
-</html>

@@ -53,6 +53,7 @@ public class UserAccountService {
 	public boolean createAccount(UserAccount userAccount, Errors errors) {
 		validateLogin(userAccount.getLogin(), errors);
 		boolean valid = !errors.hasErrors();
+		System.out.println(errors);
 		if (valid) {
 			userDao.save(userAccount);
 		}
