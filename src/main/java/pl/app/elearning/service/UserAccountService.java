@@ -52,8 +52,8 @@ public class UserAccountService {
 	@Transactional(readOnly = false)
 	public boolean createAccount(UserAccount userAccount, Errors errors) {
 		validateLogin(userAccount.getLogin(), errors);
+		validateEmail(userAccount.getEmail(), errors);
 		boolean valid = !errors.hasErrors();
-		System.out.println(errors);
 		if (valid) {
 			userDao.save(userAccount);
 		}
@@ -63,6 +63,12 @@ public class UserAccountService {
 	private void validateLogin(String login, Errors errors) {
 		if (userDao.findByUserLogin(login) != null) {
 			errors.rejectValue("login", "abc", new String[] { login }, null);
+		}
+	}
+
+	private void validateEmail(String email, Errors errors) {
+		if (!isEmailExists(email)) {
+			errors.rejectValue("email", "abc", new String[] { email }, null);
 		}
 	}
 

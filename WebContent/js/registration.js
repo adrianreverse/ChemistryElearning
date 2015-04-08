@@ -131,10 +131,11 @@ function sendRegistrationFormData() {
 				 		setAlert("success", "Account was created");
 					} else {
 					    alert('nie udalo sie utworzyc uzytkownika' + ',' + response.status + ',' + response.errorMessage);
-					 }
+					}
 			},
 			error: function(response) {
-				    console.log(response);				    		
+					//log.error("An error occurred", response);
+				   console.log(response);				    		
 			}
 		});
 	    

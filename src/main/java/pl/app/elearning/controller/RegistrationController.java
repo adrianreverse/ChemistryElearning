@@ -37,17 +37,14 @@ public class RegistrationController {
 
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
-	// @ModelAttribute("account") @Valid
 	public JsonResponse postRegistrationForm(@Valid @RequestBody UserAccount userAccount, BindingResult result) {
 		boolean valid = userAccountService.createAccount(userAccount, result);
 		if (valid) {
 			log.info("Account is created");
-			System.out.println("ok");
 			return new JsonResponse("ok", "brak bledow");
 		} else {
-			log.info("Error occurs during creating account");
-			System.out.println("abc failed");
-			return new JsonResponse("abc failed", "bledy");
+			log.info("An error occured");
+			return new JsonResponse("error", "bledy");
 		}
 	}
 
