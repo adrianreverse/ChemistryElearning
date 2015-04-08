@@ -52,3 +52,16 @@
 	margin-left: 1.5rem;
 	margin-right: 1.5rem;
 }
+
+.sub-header .cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.right-cell {
+	
+}
+
+.left-cell {
+	width: 100%;
+}

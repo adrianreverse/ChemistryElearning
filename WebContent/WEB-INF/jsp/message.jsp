@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,7 +18,40 @@
 <body class="body">
 	<div id="layout-region" class="container elearning-container">
 		<%@ include file="navbar.jsp"%>
-		<a href="messages/new" id="new-message-button"><span>message</span></a>
+		
+		<div id="main-region">
+			<section class="message-container">
+				<header class="row">
+					<div class="col-xs-12">
+						<div class="sub-header">
+							<div class="cell left-cell">
+								<h1>Wiadomości</h1>
+							</div>
+							<div class="cell right-cell">
+								<a href="messages/new" id="new-message-button" class="btn btn-primary">
+									<span>Wiadomość</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="msg-list">
+							<article class="msg-list-elem">
+								<div class="msg-elem-title">
+									<h3>lsjdkhbcvasjdvbhj</h3>
+								</div>
+								<div class="msg-elem-message">
+								
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
 		<%@ include file="footer.jsp"%> 
 </div>
 </body>

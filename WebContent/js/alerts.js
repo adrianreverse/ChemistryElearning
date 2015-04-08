@@ -29,7 +29,7 @@ function setAlert(status, message) {
 	
 	$('#main-region').prepend(alertContent);
 	$('.alert').addClass(alertClass);
-	$('.alert-container').hide().fadeIn('slow').delay(3000).fadeOut('slow').queue(function() {
+	$('.alert-container').hide().fadeIn('slow').delay(4000).fadeOut('slow').queue(function() {
 	    $(this).remove();
 	});
 

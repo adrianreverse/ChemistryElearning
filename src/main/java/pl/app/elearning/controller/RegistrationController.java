@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -35,7 +36,7 @@ public class RegistrationController {
 		return REGISTRATION_PAGE;
 	}
 
-	@RequestMapping(value = "/registerUser", method = RequestMethod.POST, produces = "application/json")
+	@RequestMapping(value = "/registerUser", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public JsonResponse postRegistrationForm(@Valid @RequestBody UserAccount userAccount, BindingResult result) {
 		boolean valid = userAccountService.createAccount(userAccount, result);
@@ -43,7 +44,7 @@ public class RegistrationController {
 			log.info("Account is created");
 			return new JsonResponse("ok", "brak bledow");
 		} else {
-			log.info("An error occured");
+			log.info("An error occurred");
 			return new JsonResponse("error", "bledy");
 		}
 	}

@@ -84,6 +84,7 @@ public class UserAccountController {
 		userAccount.setLogin(user.getLogin());
 		userAccount.setEmail(user.getEmail());
 		userAccount.setPassword(user.getPassword());
+		userAccount.setPasswordConfirmation(user.getPassword());
 		userAccountService.addOrUpdateUser(userAccount);
 		return REDIRECT_ACOUNT;
 	}

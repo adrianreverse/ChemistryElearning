@@ -30,6 +30,7 @@ $(function() {
 			$(error).addClass('form-alert');
 			error.insertAfter(element);
 		}	
-	});
+	});	
+	
 });
 
