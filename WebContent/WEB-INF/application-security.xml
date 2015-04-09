@@ -14,10 +14,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		<form-login authentication-failure-url="/login?error"
 			default-target-url="/home"  always-use-default-target="true" />
 		<remember-me />
+		
+		<session-management invalid-session-url="/home">
+       		 <!-- <concurrency-control error-if-maximum-exceeded="true" max-sessions="1"></concurrency-control>-->
+       		<!--  <concurrency-control
+				max-sessions="1"
+       			expired-url="/your-page-here" />-->
+    	</session-management>
 
-		<logout  logout-success-url="/home" delete-cookies="JSESSIONID" />
-		<intercept-url pattern="/account*" access="isAuthenticated()" />
-		<intercept-url pattern="/messages*" access="isAuthenticated()" />
+		<logout logout-success-url="/home" delete-cookies="JSESSIONID" />
+		<intercept-url pattern="/account/**" access="isAuthenticated()"/>
+		<intercept-url pattern="/messages/**" access="isAuthenticated()" />
+		<intercept-url pattern="/messages/new/**" access="isAuthenticated()" />
+		<intercept-url pattern="/*" access="permitAll()"/> 
 <!-- 
 		<session-management>
 			<concurrency-control error-if-maximum-exceeded="true"  expired-

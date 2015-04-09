@@ -8,6 +8,8 @@
 
 <c:url var="logoutUrl" value="/j_spring_security_logout" />
 <c:set var="accountUrl" value="/account"/>
+<c:set var="homeUrl" value="/home"/>
+<c:set var="messagesUrl" value="/messages"/>
 <c:set var="url" value="${requestScope['javax.servlet.forward.servlet_path']}" />
 
 
@@ -28,12 +30,16 @@
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<div class="nav navbar-nav navbar-right">
 				<ul class="list-inline">
-					<li><a class="btn btn-link navbar-link home" href="${pageContext.request.contextPath}/home">
-							<spring:message code="navbar.link.home" />
-					</a></li>
+					<c:if test="${!fn:contains(url, homeUrl)}">
+						<li><a class="btn btn-link navbar-link home" href="${pageContext.request.contextPath}/home">
+								<spring:message code="navbar.link.home" />
+						</a></li>
+					</c:if>
 					<security:authorize access="isAuthenticated()">
-						<li><a id="nav-message" class="btn btn-link navbar-link messages" href="${pageContext.request.contextPath}/messages">
-						Messages</a><span id="message-counter">99</span></li>
+						<c:if test="${!fn:contains(url, messagesUrl)}">
+							<li><a id="nav-message" class="btn btn-link navbar-link messages" href="${pageContext.request.contextPath}/messages">
+							Messages</a><span id="message-counter">99</span></li>
+						</c:if>
 						<c:if test="${!fn:contains(url, accountUrl)}">
 							<li><a class="btn btn-link navbar-link konto" href="${pageContext.request.contextPath}/account">
 								My account</a></li>
