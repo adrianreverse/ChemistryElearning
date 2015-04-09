@@ -33,13 +33,12 @@
 	background-color: #3f4b56;
 	color: #fff;
 	text-decoration: none;
+	border-radius: 0.5rem;
 }
 
 .navbar-default .navbar-link {
 	color: #fff;
 	text-decoration: none;
-	padding-top: 16px;
-	padding-bottom: 16px;
 }
 
 .navbar-brand img {
@@ -54,6 +53,13 @@
 
 .list-inline li {
 	display: inline-block;
+}
+
+.list-inline li {
+    border-right: 0.1rem solid #fff;
+}
+.list-inline li:last-child, .list-inline li:nth-last-child(2){
+    border:none;
 }
 
 #footer {
