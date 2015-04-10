@@ -51,15 +51,12 @@
 	margin: 1px 1px;
 }
 
-.list-inline li {
-	display: inline-block;
+.list-inline > li {
+	border-right: 0.1rem solid #fff;
 }
 
-.list-inline li {
-    border-right: 0.1rem solid #fff;
-}
-.list-inline li:last-child, .list-inline li:nth-last-child(2){
-    border:none;
+.list-inline > li:last-child, .list-inline > li:nth-last-child(2){
+    border: none;
 }
 
 #footer {
