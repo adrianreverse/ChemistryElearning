@@ -33,22 +33,6 @@ public class LoginController {
 		return model;
 	}
 
-	// @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
-	// public String loginFailed(Model model) {
-	// return LOGIN_FAILED_PAGE;
-	// }
-
-	// @RequestMapping(value = "/correctLoginAndPassword")
-	// @ResponseBody
-	// public String checkLoginAndPassword(@RequestParam String login, @RequestParam String password) {
-	// return userAccountService.isCredentialsCorrect(login, password).toString();
-	// }
-
-	@RequestMapping(value = "/messages/keyboard", method = RequestMethod.GET)
-	public String openKeyboard() {
-		return "keyboard";
-	}
-
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		binder.setAllowedFields(new String[] { "login", "password" });

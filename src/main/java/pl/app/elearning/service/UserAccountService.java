@@ -92,12 +92,5 @@ public class UserAccountService {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		return auth.getName();
 	}
-	//
-	// public Boolean isCredentialsCorrect(String login, String password) {
-	// UserAccount user = userDao.findByUserLogin(login);
-	// if (user != null) {
-	// return password.equals(user.getPassword());
-	// }
-	// return false;
-	// }
+
 }

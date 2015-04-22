@@ -52,22 +52,6 @@ public class UserAccountController {
 		// return userAccountService.addOrUpdateUser(user);
 	}
 
-	// @RequestMapping(value = "/account/edit/personaldata", method = RequestMethod.GET)
-	// public ModelAndView editUserPersonalData() {
-	// ModelAndView mav = new ModelAndView();
-	// UserAccount user = userAccountService.getUserByLogin(userAccountService.userLoginLoggedIn());
-	// mav.addObject("userProfile", user);
-	// mav.setViewName("profile");
-	// return mav;
-	// }
-	// /account/edit/personaldata
-	// @RequestMapping(value = "/account/edit/personaldata", method = RequestMethod.GET)
-	// public @ResponseBody Set<String> findAllStates() {
-	// Set<String> a = new HashSet<String>();
-	// a.add("adrian adrian");
-	// return a;
-	// }
-
 	@RequestMapping(value = "/account/edit/personaldata", method = RequestMethod.GET)
 	public ModelAndView editPersonalData() {
 		ModelAndView mav = new ModelAndView();

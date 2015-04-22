@@ -25,4 +25,9 @@ public class MessageController {
 		return "messageform";
 	}
 
+	@RequestMapping(value = "/messages/keyboard", method = RequestMethod.GET)
+	public String openKeyboard() {
+		return "keyboard";
+	}
+
 }
